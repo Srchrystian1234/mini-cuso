@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumo Ar-Condicionado</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./hashtag.svg" alt="Logo da Hashtag Treinamentos." />
+    </header>
+    <main>
+      <form> 
+        <div class="container-informacao">
+          <label for="consumo-aparelho">Consumo do Aparelho</label>
+          <div>
+            <input
+              id="consumo-aparelho"
+              name="consumo-aparelho"
+              type="text"
+              required
+            />
+            <input value="kWh" type="text" disabled />
+            <select name="periodo-consumo" id="periodo-consumo">
+              <option value="mes">/Mês</option>
+              <option value="ano">/Ano</option>
+            </select>
+          </div>
+        </div>
+        <div class="container-informacao">
+          <label for="horas-diarias-uso">Horas ligado por dia</label>
+          <div>
+            <input
+              id="horas-diarias-uso"
+              name="horas-diarias-uso"
+              type="text"
+              required
+            />
+            <input value="h/dia" type="text" disabled />
+          </div>
+        </div>
+        <div class="container-informacao">
+          <label for="dias-uso-mes">Dias de uso no mês</label>
+          <div>
+            <input id="dias-uso-mes" name="dias-uso-mes" type="text" required />
+            <input value="dias/mês" type="text" disabled />
+          </div>
+        </div>
+        <div class="container-informacao">
+          <label for="preco-energia">Preço da Energia</label>
+          <div>
+            <input value="R$" type="text" disabled />
+            <input
+              id="preco-energia"
+              name="preco-energia"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" id="botao-calcular" name="botao-calcular">
+          Calcular
+        </button>
+      </form>
+      <section id="container-resultados">
+        <article>
+          Seu gasto será de:
+          <p>
+            <bold id="consumo">-</bold>
+            reais
+          </p>
+        </article>
+      </section>
+    </main>
+    <script src="gasto.js"></script>
+  </body>
+</html>
