@@ -11,7 +11,7 @@ function calcularGasto(evt){
       evt.preventDefault();//evita de enviar preconcemente
       const consumoAparelho = consumoAparelhoEl.value.replace(',','.');//essa funcao so funciona com ., caso ele digite ',' , troque pelo '.'
       const periodoDeconsumo = periodoConsumoEl.value;// ano 
-      const consumoDiarioAparelho = periodoDeconsumo === "mes"? consumoAparelho/30: consumoAparelho/365; //aqui decide se é por ano ou mes com essa condicao 
+      const consumoDiarioAparelho = periodoDeconsumo === "mes"? consumoAparelho/30 : consumoAparelho/365; //aqui decide se é por ano ou mes com essa condicao 
       const diariaHorasDiariaUso = horasDiariasUsoEl.value.replace(',','.');//caso o usuario digite , fazer troca por .
       const diasUsoNoMes = diasUsoMesEl.value; //dias de uso
     const precoEnergia = precoEnergiaEl.value.replace(',','.'); //preco da energia atual que vai na conta de energia
